@@ -29,7 +29,7 @@
 - 建立虛擬環境:
   ``` bash
   # create new environment
-  $ conda create --name face-recognition python=3.8
+  $ conda create --name face-recognition python=3.7
   
   # activate this environment
   $ conda activate face-recognition
@@ -114,6 +114,8 @@
   1. 顯示偵測到的性別、年齡、髮色、情緒。
   
   2. 當情緒為happiness、neutral、sad時分別產生不同Icon。
+  
+  3. 等待3秒鐘過後才能繼續再辨識圖片。
   
   ![Alt Text](./img/Diagram1.png)
   
