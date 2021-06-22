@@ -40,6 +40,12 @@
   ``` bash
   $ python3 app.py
   ```
+- 前往網頁地址:
+
+  執行完指令後，出現以下結果時代表程式執行成功。
+  ![image info](./img/start.png)
+  之後點擊最後一行的網址就能前往網頁所在地，在這裡 [http://127.0.0.1:8000/]( http://127.0.0.1:8000/) 代表我們網頁地址。
+
 ## Results & Demo
 
 ## References
