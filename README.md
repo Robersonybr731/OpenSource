@@ -3,6 +3,7 @@
 
 ## Introduction
 本次專案是結合 [Windows Azure 人臉辨識API](https://azure.microsoft.com/zh-tw/services/cognitive-services/face/) 以及 [Python Flask](https://towardsdatascience.com/video-streaming-in-web-browsers-with-opencv-flask-93a38846fe00) 做到情緒辨識和影像的即時串流。
+
 本系統主要有三大功能:
 1. 辨識性別
 2. 辨識年齡
@@ -50,7 +51,7 @@
 - 網站介紹:
  
   ![image_info1](./img/net.png)
-  進入網址後就會開始取得攝影機的real time影像。
+  進入網址後就會開始取得攝影機的Real Time影像。
   
   點擊 **人物偵測** 按鈕就可以取得現在影像的性別、年齡、髮色、情緒等辨識結果。
 
@@ -62,7 +63,9 @@
   若想要再繼續偵測影像需要再等待3秒的時間才能再次偵測。
   
 ## Results & Demo
-
+### 連續辨識影像Demo
+  ![Alt Text](./img/demo1.gif)
+  
 ## References
 [Video Streaming in Web Browsers with OpenCV & Flask](https://towardsdatascience.com/video-streaming-in-web-browsers-with-opencv-flask-93a38846fe00)
 
