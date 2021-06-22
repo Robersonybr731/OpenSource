@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+    <title>OpenSource</title>
+</head>
+
+<body>
+    <h1>Hello Users~</h1>
+    <table style="position: relative;left: 40vh;">
+        <tr>
+            <td style="width: 650px;height: 490px;"><img id="bg" src="{{ url_for('video_feed') }}" alt="aa"></td>
+            <td style="width: 150px;">
+                <table style="position:relative; left: 2vh;">
+                    <tr>
+                        <td>性別:</td>
+                        <td id="sex">{{ gender }}</td>
+                    </tr>
+                    <tr>
+                        <td>年齡:</td>
+                        <td id="age">{{ ages }}</td>
+                    </tr>
+                    <tr>
+                        <td>髮色:</td>
+                        <td id="hair">{{ hairs }}</td>
+                    </tr>
+                    <tr>
+                        <td>情緒:</td>
+                        <td id="emotion">{{ emotions }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <form method="post">
+                                <input type="submit" name="send" value="人物偵測">
+                            </form>
+                        </td>
+                    </tr>
+                    {% if emotions=="happiness" %}
+                        <tr>
+                            <img src="{{url_for('static',filename='happy.jpg')}}" style="width: 150px;height: 150px;">
+                        </tr>
+                    {% endif %}
+                    {% if emotions=="neutral" %}
+                        <tr>
+                            <img src="{{url_for('static',filename='neutral.png')}}" style="width: 150px;height: 150px;">
+                        </tr>
+                    {% endif %}
+                    {% if emotions=="sadness" %}
+                        <tr>
+                            <img src="{{url_for('static',filename='sad.png')}}" style="width: 150px;height: 150px;">
+                        </tr>
+                    {% endif %}
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
