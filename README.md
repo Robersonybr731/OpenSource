@@ -22,14 +22,19 @@
 ### Installation
 - 建立虛擬環境:
   ``` bash
+  # create new environment
   $ conda create --name face-recognition python=3.8
+  
+  # activate this environment
   $ conda activate face-recognition
+  
+  # install all needed packages
   $ pip install -r requirements.txt
   ```
 - Download:
 
   [~~haarcascade_frontalface_default.xml~~](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml)
-  (This file is already in zip package.)
+  (This file is already in .zip package.)
 
 ### Windows Azure API
 - API帳號申請:
@@ -82,13 +87,18 @@
   
   若想要再繼續偵測影像需要再等待3秒的時間才能再次偵測。
   
+##Detail
+
+  
 ## Results & Demo
-### 連續辨識影像Demo
+### 連續影像辨識Demo
   ![Alt Text](./img/demo1.gif)
+  依照情緒的不同分別會給予三種不同的圖示
+  ![Alt Text](./img/happy.jpg)![Alt Text](./img/neutral.png)![Alt Text](./img/sad.png)
   
 ## References
-[Video Streaming in Web Browsers with OpenCV & Flask](https://towardsdatascience.com/video-streaming-in-web-browsers-with-opencv-flask-93a38846fe00)
+- [Video Streaming in Web Browsers with OpenCV & Flask](https://towardsdatascience.com/video-streaming-in-web-browsers-with-opencv-flask-93a38846fe00)
 
-[Windows Azure Face Recognition API](https://azure.microsoft.com/zh-tw/services/cognitive-services/face/)
+- [Windows Azure Face Recognition API](https://azure.microsoft.com/zh-tw/services/cognitive-services/face/)
 
-[Windows Azure Face Recognition Document](https://docs.microsoft.com/zh-tw/azure/cognitive-services/face/quickstarts/client-libraries?pivots=programming-language-python&tabs=visual-studio)
+- [Windows Azure Face Recognition Document](https://docs.microsoft.com/zh-tw/azure/cognitive-services/face/quickstarts/client-libraries?pivots=programming-language-python&tabs=visual-studio)
