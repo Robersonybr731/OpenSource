@@ -29,7 +29,6 @@
 - Download:
 
   [~~haarcascade_frontalface_default.xml~~](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml)
-  
   (This file is already in zip package.)
 
 ### Windows Azure API
@@ -39,7 +38,7 @@
 
 - 取得金鑰及端點:
   
-  如下圖，進入控制中心後點擊右方目錄的 **金鑰與端點** 就可以看到金鑰1和端點。
+  如下圖，進入**控制中心**後點擊右方目錄的 **金鑰與端點** 就可以看到金鑰1和端點。
   
   ![image key](./img/keyblur.jpg)
 
@@ -51,8 +50,9 @@
   然後，複製端點數值到`app.py`的第26行，把`BASE_URL`改成是自己的端點。
   - https://github.com/Robersonybr731/OpenSource/blob/master/app.py#L26
 
-  最後,在端點網址的最後面加上`/face/v1.0`才能真正地完成修改。
-
+  最後,如下圖，在端點網址的最後面加上`/face/v1.0`才能真正地完成修改。
+  ![image info](./img/endpoint.png)
+  
 ### Hardware
 - WebCam
 
