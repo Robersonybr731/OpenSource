@@ -94,7 +94,8 @@
 ### 連續影像辨識Demo
   ![Alt Text](./img/demo1.gif)
   依照情緒的不同分別會給予三種不同的圖示
-  ![Alt Text](./img/happy.jpg)![Alt Text](./img/neutral.png)![Alt Text](./img/sad.png)
+  <img src="./img/happy.jpg" width="200">
+  ![Alt Text](./img/neutral.png)![Alt Text](./img/sad.png)
   
 ## References
 - [Video Streaming in Web Browsers with OpenCV & Flask](https://towardsdatascience.com/video-streaming-in-web-browsers-with-opencv-flask-93a38846fe00)
