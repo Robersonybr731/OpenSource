@@ -87,14 +87,15 @@
   
   若想要再繼續偵測影像需要再等待3秒的時間才能再次偵測。
   
-##Detail
+
+## Detail
 
   
 ## Results & Demo
 ### 連續影像辨識Demo
   ![Alt Text](./img/demo1.gif)
   
-  依照情緒的不同分別會給予三種不同的圖示
+  - 如下圖示，依照情緒的不同分別會給予三種不同的圖案(Happiness、Neutral、Sad)
   
   <img src="./img/emoji.png">
 
