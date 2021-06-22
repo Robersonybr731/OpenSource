@@ -109,7 +109,7 @@
   
   2. 當情緒為happiness、neutral、sad時分別產生不同Icon。
   
-  ![Alt Text](./img/Diagram.png)
+  ![Alt Text](./img/Diagram1.png)
   
 ## Results & Demo
 - 連續影像辨識Demo
