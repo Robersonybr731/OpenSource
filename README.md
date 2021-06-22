@@ -96,9 +96,7 @@
   
   依照情緒的不同分別會給予三種不同的圖示
   
-  <img src="./img/happy.jpg" width="200">
-  <img src="./img/neutral.png" width="200">
-  <img src="./img/sad.png" width="200">
+  <img src="./img/emoji.png">
 
   
 ## References
