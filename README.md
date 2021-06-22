@@ -89,10 +89,30 @@
   
 
 ## Detail
+- 影像傳遞:
+  
+  1. WebCam產生影像後會藉由Flask RealTime影像到Web端進行顯示。
+  
+  2. WebCam產生的影像在本地端產生圖檔。
+  
+- API辨識:
 
+  1. 當點擊**人物偵測** 按鈕後讀取本地端的圖檔。
+  
+  2. 讀取的圖檔經由API辨識產生Attribute。
+  
+  3. 當有偵測到人臉時顯示Feature，沒有則回傳None。
+
+- 網頁顯示:
+
+  1. 顯示偵測到的性別、年齡、髮色、情緒。
+  
+  2. 當情緒為happiness、neutral、sad時分別產生不同Icon。
+  
+  ![Alt Text](./img/Diagram.png)
   
 ## Results & Demo
-### 連續影像辨識Demo
+- 連續影像辨識Demo
   ![Alt Text](./img/demo1.gif)
   
   - 如下圖示，依照情緒的不同分別會給予三種不同的圖案(Happiness、Neutral、Sad)
