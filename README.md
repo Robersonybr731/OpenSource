@@ -26,13 +26,33 @@
   $ conda activate face-recognition
   $ pip install -r requirements.txt
   ```
-- 透過 [Windows Azure](https://azure.microsoft.com/zh-tw/services/cognitive-services/face/) 建立帳號後申請Windows Azure Face Recognition **API金鑰**
+- Download:
+
+  [~~haarcascade_frontalface_default.xml~~](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml)
   
-- (增加金鑰放置解釋)
+  (This file is already in zip package.)
+
+### Windows Azure API
+- API帳號申請:
   
-- 下載所需檔案:
-  [haarcascade_frontalface_default.xml](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml)
+  首先透過 [Windows Azure](https://azure.microsoft.com/zh-tw/services/cognitive-services/face/) 建立帳號後申請Windows Azure Face Recognition **API金鑰**
+
+- 取得金鑰及端點:
   
+  如下圖，進入控制中心後點擊右方目錄的 **金鑰與端點** 就可以看到金鑰1和端點。
+  
+  ![image key](./img/keyblur.jpg)
+
+- Configure:
+
+  首先，複製金鑰1到`app.py`裡的第24行，把`KEY` 改成自己的金鑰。
+  - https://github.com/Robersonybr731/OpenSource/blob/master/app.py#L24
+  
+  然後，複製端點數值到`app.py`的第26行，把`BASE_URL`改成是自己的端點。
+  - https://github.com/Robersonybr731/OpenSource/blob/master/app.py#L26
+
+  最後,在端點網址的最後面加上`/face/v1.0`才能真正地完成修改。
+
 ### Hardware
 - WebCam
 
