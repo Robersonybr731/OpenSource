@@ -1,8 +1,9 @@
 # Face Recognition
 在現今疫情的狀況，人與人的互動稀少，彼此面對面的感受人的情緒的機會越來越少。
 
-由於現今上課大多是以Teams視訊的線上課程。
-所以我就想藉由辨識圖片的資訊來分析每個人的情緒變化，以達到在上課時也能得知朋友的情緒反應
+由於現今上課大多是以Teams視訊的線上課程，
+
+所以我就想藉由辨識圖片的資訊來分析每個人的情緒變化，以達到在上課時也能得知朋友的情緒反應。
 
 因此這次的專案主要是想要辨識人的影像在網路鏡頭下，關於情緒的辨識。
 
@@ -54,10 +55,10 @@
 
 - Configure:
 
-  首先，複製金鑰1到`app.py`裡的第24行，把`KEY` 改成自己的金鑰。
+  首先，複製 **金鑰1** 到`app.py`裡的第24行，把`KEY` 改成自己的金鑰。
   - https://github.com/Robersonybr731/OpenSource/blob/master/app.py#L24
   
-  然後，複製端點數值到`app.py`的第26行，把`BASE_URL`改成是自己的端點。
+  然後，複製 **端點** 數值到`app.py`的第26行，把`BASE_URL`改成是自己的端點。
   - https://github.com/Robersonybr731/OpenSource/blob/master/app.py#L26
 
   最後,如下圖，在端點網址的最後面加上`/face/v1.0`才能真正地完成修改。
@@ -96,15 +97,15 @@
 ## Detail
 - 影像傳遞:
   
-  1. WebCam產生影像後會藉由Flask RealTime影像到Web端進行顯示。
+  1. WebCam產生影像後會藉由Flask傳遞Real Time影像到Web端進行顯示。
   
-  2. WebCam產生的影像在本地端產生圖檔。
+  2. WebCam產生的影像在本地端產生`./bbface.jpg`。
   
 - API辨識:
 
-  1. 當點擊**人物偵測** 按鈕後讀取本地端的圖檔。
+  1. 當點擊**人物偵測** 按鈕後讀取`./bbface.jpg`圖檔。
   
-  2. 讀取的圖檔經由API辨識產生Attribute。
+  2. 讀取的圖檔經由Windows Azure Face Recognition API辨識產生Attribute。
   
   3. 當有偵測到人臉時顯示Feature，沒有則回傳None。
 
@@ -121,7 +122,7 @@
 
   ![Alt Text](./img/demo1.gif)
   
-  - 如下圖示，依照情緒的不同分別會給予三種不同的圖案(Happiness、Neutral、Sad)
+- 如下圖示，依照情緒的不同分別會給予三種不同的圖案(Happiness、Neutral、Sad)
   
   <img src="./img/emoji.png">
 
