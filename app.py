@@ -3,23 +3,26 @@ import cv2
 import cognitive_face as CF
 app = Flask(__name__)
 
+# record attributes
 informations={}
 
 
 def detectEmotion():
+    # set default picture
     oldface = CF.face.detect('./babyface.jpg', False, False, 'emotion')
     # set up the url of th e group picture
-    group_img_url = './bbface.jpg'
     attributes = {'emotion,age,Gender,Glasses,Hair'}
 
     print("Face emotion detecting")
     faces = CF.face.detect('./bbface.jpg', False, False, attributes)
+    # check detected
     if (not bool(faces)):
         return oldface[0]
     return faces[0]
 
 def gen_frames():
     global informations
+    # Set Camera and Windows Azure API
     camera=cv2.VideoCapture(0)
     KEY = '314cbf094b584c6a8590e3e78df6cbc2'
     CF.Key.set(KEY)
@@ -42,10 +45,12 @@ def gen_frames():
             for (x, y, w, h) in faces:
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 0, 255), 2)
             face = 0
+            # write picture
             cv2.imwrite('./bbface.jpg', frame)
             if i % 100 == 0:
                 face = detectEmotion()
                 if face != 0:
+                    # update informations value
                     informations = face['faceAttributes']
                     face = face['faceAttributes']
                     print(informations)
@@ -63,6 +68,8 @@ def gen_frames():
 @app.route('/',methods=['POST','GET'])
 def index():
     global informations
+
+    # form request
     if request.method == 'POST':
         if request.values['send'] == '人物偵測':
             genders=''
@@ -85,8 +92,8 @@ def index():
             else:
                 hairs='none'
             emotions='none'
-
             emo=0
+            # check which emotion confidence is higher
             if 'emotion' in informations:
                 for i in informations['emotion']:
                     print(i,float(informations['emotion'][i]))
@@ -94,11 +101,13 @@ def index():
                         emo=float(informations['emotion'][i])
                         emotions=i
             return render_template('stream.html', gender=genders,ages=ages,hairs=hairs,emotions=emotions)
+    # initial no value
     return render_template('stream.html',gender="None",ages="None",hairs="None",emotions="None")
 
 
 @app.route('/video_feed')
 def video_feed():
+    # generate frame
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
