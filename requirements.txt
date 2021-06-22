@@ -1,2 +1,3 @@
-314cbf094b584c6a8590e3e78df6cbc2
-https://opensource1071526.cognitiveservices.azure.com/
+opencv 3.4.2
+cognitive-face 1.5.0
+Flask 2.0.1
