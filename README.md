@@ -1,5 +1,10 @@
 # Face Recognition
-在現今疫情的狀況，人與人的互動稀少，因此能彼此面對面的感受人的情緒的機會越來越少，因此這次的專案主要是想要辨識人的影像在網路鏡頭下，關於情緒的辨識。
+在現今疫情的狀況，人與人的互動稀少，彼此面對面的感受人的情緒的機會越來越少。
+
+由於現今上課大多是以Teams視訊的線上課程。
+所以我就想藉由辨識圖片的資訊來分析每個人的情緒變化，以達到在上課時也能得知朋友的情緒反應
+
+因此這次的專案主要是想要辨識人的影像在網路鏡頭下，關於情緒的辨識。
 
 ## Introduction
 本次專案是結合 [Windows Azure 人臉辨識API](https://azure.microsoft.com/zh-tw/services/cognitive-services/face/) 以及 [Python Flask](https://towardsdatascience.com/video-streaming-in-web-browsers-with-opencv-flask-93a38846fe00) 做到情緒辨識和影像的即時串流。
@@ -113,6 +118,7 @@
   
 ## Results & Demo
 - 連續影像辨識Demo
+
   ![Alt Text](./img/demo1.gif)
   
   - 如下圖示，依照情緒的不同分別會給予三種不同的圖案(Happiness、Neutral、Sad)
