@@ -16,12 +16,12 @@
 3. 辨識情緒以及其他面部特徵
 
 ## Dependencies
-|Name|
-|----|
-|Flask 2.0.1|
-|Python 3.7.6|
-|opencv 3.4.2|
-|cognitive-face 1.5.0|
+Name  | Version   
+------|-------
+Flask|2.0.1
+Python|3.7.6
+opencv|3.4.2
+cognitive-face|1.5.0
 
 ## Getting Started
 
