@@ -23,7 +23,7 @@
 |opencv 3.4.2|
 |cognitive-face 1.5.0|
 
-## Build Process
+## Getting Started
 
 ### Installation
 - 建立虛擬環境:
